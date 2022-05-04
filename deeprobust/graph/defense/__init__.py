@@ -20,4 +20,4 @@ except ImportError as e:
 
 __all__ = ['GCN', 'GCNSVD', 'GCNJaccard', 'RGCN', 'ProGNN',
            'GraphConvolution', 'GGCL_F', 'GGCL_D', 'GAT', 'MedianGCN',
-           'ChebNet', 'SGC', 'SimPGCN', 'Node2Vec', 'DeepWalk']
+           'ChebNet', 'SGC', 'SimPGCN', 'Node2Vec', 'DeepWalk', 'GCN3']
