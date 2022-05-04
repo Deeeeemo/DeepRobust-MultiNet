@@ -51,7 +51,7 @@ model.eval()
 # You can use the inner function of model to test
 degrees = get_degree_squence(adj)
 for x in range(1,20):
-	deg_group = [i if degrees[i]==x for i in idx_test]
+	deg_group = [i for i in idx_test if degrees[i]==x]
 	print("degree "+ str(x) + " accuracy: ")
 	model.test(deg_group)
 
