@@ -51,7 +51,7 @@ model.eval()
 # You can use the inner function of model to test
 degrees = get_degree_squence(adj)
 print("degrees")
-print(str(len(degrees[0])))
+print(degrees[0])
 print("idxmax")
 print(str(max(idx_test)))
 for x in range(1,20):
