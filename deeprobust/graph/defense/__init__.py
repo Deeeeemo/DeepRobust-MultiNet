@@ -1,4 +1,5 @@
 from .gcn import GCN, GraphConvolution
+from .gcn3 import GCN3
 from .gcn_preprocess import GCNSVD, GCNJaccard
 from .r_gcn import RGCN, GGCL_F, GGCL_D
 from .prognn import ProGNN
