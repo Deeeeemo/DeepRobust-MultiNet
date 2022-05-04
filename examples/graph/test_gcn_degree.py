@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 import torch.nn.functional as F
-from deeprobust.graph.defense import GCN
+from deeprobust.graph.defense import GCN, GCN3
 from deeprobust.graph.utils import *
 from deeprobust.graph.data import Dataset
 from deeprobust.graph.data import PtbDataset, PrePtbDataset
@@ -41,7 +41,7 @@ if args.cuda:
     torch.cuda.manual_seed(args.seed)
 
 # Setup GCN Model
-model = GCN(nfeat=features.shape[1], nhid=16, nclass=labels.max()+1, device=device)
+model = GCN3(nfeat=features.shape[1], nhid=16, nclass=labels.max()+1, device=device)
 model = model.to(device)
 
 model.fit(features, adj, labels, idx_train, train_iters=200, verbose=True)
@@ -51,7 +51,7 @@ model.eval()
 # You can use the inner function of model to test
 degrees = get_degree_squence(adj).tolist()
 print("degrees")
-print(size(degrees))
+print(str(len(degrees[0])))
 print("idxmax")
 print(str(max(idx_test)))
 for x in range(1,20):
