@@ -55,7 +55,7 @@ print(str(len(degrees)))
 print("idxmax")
 print(str(max(idx_test)))
 for x in range(1,20):
-	deg_group = [i for i in idx_test if degrees[i]==x]
+	deg_group = [i for i in idx_test if degrees[0][i]==x]
 	print("degree "+ str(x) + " accuracy: ")
 	model.test(deg_group)
 
