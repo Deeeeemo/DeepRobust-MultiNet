@@ -50,6 +50,10 @@ model.fit(features, adj, labels, idx_train, train_iters=200, verbose=True)
 model.eval()
 # You can use the inner function of model to test
 degrees = get_degree_squence(adj)
+print("degrees")
+print(degrees)
+print("idxmax")
+print(str(max(idx_test)))
 for x in range(1,20):
 	deg_group = [i for i in idx_test if degrees[i]==x]
 	print("degree "+ str(x) + " accuracy: ")
