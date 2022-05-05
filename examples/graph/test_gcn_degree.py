@@ -1,7 +1,7 @@
 import torch
 import numpy as np
 import torch.nn.functional as F
-from deeprobust.graph.defense import GCN, GCN3
+from deeprobust.graph.defense import GCN
 from deeprobust.graph.utils import *
 from deeprobust.graph.data import Dataset
 from deeprobust.graph.data import PtbDataset, PrePtbDataset
