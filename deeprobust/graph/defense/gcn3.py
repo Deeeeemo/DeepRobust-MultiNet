@@ -97,7 +97,7 @@ class GCN3(nn.Module):
     def __init__(self, nfeat, nhid, nclass, dropout=0.5, lr=0.01, weight_decay=5e-4,
             with_relu=True, with_bias=True, device=None):
 
-        super(GCN, self).__init__()
+        super(GCN3, self).__init__()
 
         assert device is not None, "Please specify 'device'!"
         self.device = device
