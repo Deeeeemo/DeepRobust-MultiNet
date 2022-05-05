@@ -120,6 +120,7 @@ class GCN(nn.Module):
         self.features = None
 
     def forward(self, x, adj):
+        x = F.dropout(x, self.dropout, training=self.training)
         if self.with_relu:
             x = F.relu(self.gc1(x, adj))
         else:
