@@ -105,8 +105,8 @@ class GCN3(nn.Module):
         self.hidden_sizes = [nhid]
         self.nclass = nclass
         self.gc1 = GraphConvolution(nfeat, nhid, with_bias=with_bias)
-        self.gc2 = GraphConvolution(nhid, nhid2, with_bias=with_bias)
-        self.gc3 = GraphConvolution(nhid2, nclass, with_bias=with_bias)
+        self.gc2 = GraphConvolution(nhid, nhid, with_bias=with_bias)
+        self.gc3 = GraphConvolution(nhid, nclass, with_bias=with_bias)
         self.dropout = dropout
         self.lr = lr
         if not with_relu:
